@@ -1,0 +1,9 @@
+---
+- name: Install workstation OSX
+  hosts: workstation
+  user: claudiobrunomartins
+  # remote_user: user
+  sudo: no
+
+  roles:
+    - dotfiles

@@ -1,0 +1,7 @@
+---
+- name: Install Vagrant
+  hosts: vagrant
+  sudo: yes
+
+  roles:
+    - dotfiles
