@@ -1,2 +1,18 @@
-- name: Test
-  shell: echo {{ example }} > /tmp/a
+- name: Copy dotfiles
+  copy: "src={{ dotfiles_orig_template }}{{ item }} dest={{ dotfiles_home }}.{{ item }}"
+  with_items:
+    - bash_profile
+    - bashrc
+    - ctags
+    - custom_bashrc
+    - gitconfig
+    - gitignore_global
+    - htoprc
+    - irbrc
+    - profile
+    - pryrc
+    - rspec
+    - rvmrc
+    - screenrc
+    - tmux.conf
+    - zshrc

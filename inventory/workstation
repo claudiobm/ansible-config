@@ -1,2 +1,4 @@
+localosx ansible_ssh_host=127.0.0.1
+
 [workstation]
-127.0.0.1 ansible_connection=local
+localosx

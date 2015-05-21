@@ -1,2 +1,3 @@
 ---
-example: Test Vars 2
+dotfiles_home: "~/"
+dotfiles_orig_template: templates/
