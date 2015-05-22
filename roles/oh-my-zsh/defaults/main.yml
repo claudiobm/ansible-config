@@ -1,0 +1,3 @@
+---
+ohmyzsh_repo: "https://github.com/robbyrussell/oh-my-zsh.git"
+ohmyzsh_repo_local_destination: "~/.oh-my-zsh"

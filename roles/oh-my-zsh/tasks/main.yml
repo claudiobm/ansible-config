@@ -1,0 +1,6 @@
+---
+- name: 'Install oh my zsh'
+  git:
+    repo: "{{ ohmyzsh_repo }}"
+    dest: "{{ ohmyzsh_repo_local_destination }}"
+  sudo: no
