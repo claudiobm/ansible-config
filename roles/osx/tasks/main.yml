@@ -8,7 +8,7 @@
 - name: 'Install homebrew'
   sudo: no
   shell: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  when: brew_available|success
+  when: brew_available|failed
 
 - name: 'Update homebrew'
   homebrew:
