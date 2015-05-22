@@ -1,7 +1,23 @@
 ---
+- name: Brew is available?
+  command: brew --version
+  register: brew_available
+  ignore_errors: True
+  changed_when: false
+
+- name: 'Install homebrew'
+  sudo: no
+  shell: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  when: brew_available|success
+
+- name: 'Update homebrew'
+  homebrew:
+    update_homebrew: yes
+  when: ansible_os_family == "Darwin"
+
 - name: 'Install brew apps'
   sudo: no
-  homebrew: name=git state=present
+  homebrew: name={{ item }} state=present
   when: ansible_os_family == "Darwin"
   with_items:
     - reattach-to-user-namespace
@@ -16,3 +32,4 @@
     - v8
     - htop-osx
     - sqlite
+    - docker
