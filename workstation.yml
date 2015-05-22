@@ -4,4 +4,5 @@
   sudo: no
 
   roles:
+    - git
     - dotfiles

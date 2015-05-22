@@ -1,0 +1,11 @@
+---
+
+- name: 'Install git in debian'
+  sudo: true
+  apt: pkg=git
+  when: ansible_os_family == "Debian"
+
+- name: 'Install git in Osx'
+  sudo: no
+  homebrew: name=git state=present
+  when: ansible_os_family == "Darwin"

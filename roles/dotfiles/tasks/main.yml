@@ -1,18 +1,15 @@
-- name: Copy dotfiles
-  copy: "src={{ dotfiles_orig_template }}{{ item }} dest={{ dotfiles_home }}.{{ item }}"
-  with_items:
-    - bash_profile
-    - bashrc
-    - ctags
-    - custom_bashrc
-    - gitconfig
-    - gitignore_global
-    - htoprc
-    - irbrc
-    - profile
-    - pryrc
-    - rspec
-    - rvmrc
-    - screenrc
-    - tmux.conf
-    - zshrc
+---
+- name: Ensure dotfiles repository is cloned locally.
+  git:
+    repo: "{{ dotfiles_repo }}"
+    dest: "{{ dotfiles_repo_local_destination }}"
+  sudo: no
+
+- name: Link dotfiles into home folder.
+  file:
+    src: "{{ dotfiles_repo_local_destination }}/{{ item }}"
+    dest: "{{ dotfiles_home }}/.{{ item }}"
+    force: yes
+    state: link
+  sudo: no
+  with_items: dotfiles_files

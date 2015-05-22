@@ -1,0 +1,19 @@
+---
+dotfiles_repo: "https://github.com/claudiobm/dotfiles"
+dotfiles_repo_local_destination: "~/dotfiles"
+dotfiles_home: "~"
+dotfiles_files:
+  - bash_profile
+  - bashrc
+  - ctags
+  - gitconfig
+  - gitignore_global
+  - htoprc
+  - irbrc
+  - profile
+  - pryrc
+  - rspec
+  - rvmrc
+  - screenrc
+  - tmux.conf
+  - zshrc

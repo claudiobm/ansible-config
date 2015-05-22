@@ -1,3 +1,6 @@
 ---
-dotfiles_home: "~/"
-dotfiles_orig_template: templates/
+dotfiles_files:
+  - bashrc
+  - gitconfig
+  - gitignore_global
+  - tmux.conf
