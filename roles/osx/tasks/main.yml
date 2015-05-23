@@ -28,8 +28,10 @@
     - openssl
     - python
     - redis
+    - tree
     - tmux
     - v8
     - htop-osx
     - sqlite
     - docker
+    - wget
