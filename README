@@ -1,0 +1,42 @@
+# Ansible Config
+
+My ansible playbook to build my environments with Homebrew and Homebrew Cask recipes and my [dotfiles](https://github.com/claudiobm/dotfiles).
+
+## Ansible
+
+This repository need Ansible to run.
+
+### Installation
+
+Install pip:
+
+```
+sudo easy_install pip
+```
+Then, install Ansible:
+
+```
+sudo pip install ansible --quiet
+```
+
+## Running my Playbook
+
+Clone this repo in any place:
+
+```
+git clone git@github.com:claudiobm/ansible-config.git
+```
+
+Enter in directory:
+
+```
+cd ansible-config
+```
+
+And run the magic command:
+
+```
+ansible-playbook -i inventory/workstation workstation.yml
+```
+
+Well done dude! Your new OSX is running awesome!
