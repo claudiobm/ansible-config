@@ -11,13 +11,13 @@
   sudo: no
   homebrew_cask: name={{item}} state=present
   with_items:
-    - bartender
     - adium
     - alfred
-    - bartender
     - cyberduck
     - evernote
     - firefox
     - google-chrome
     - iterm2
     - vlc
+    - sourcetree
+    - slack
