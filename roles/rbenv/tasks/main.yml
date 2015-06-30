@@ -1,5 +1,5 @@
 ---
-- name: 'Install rbenv'
+- name: 'Install rbenv with brew'
   sudo: no
   homebrew: name={{ item }} state=present
   when: ansible_os_family == "Darwin"
@@ -7,6 +7,9 @@
     - rbenv
     - ruby-build
 
-- name: 'Init rbenv'
+- name: 'Install rbenv for linux'
+  git:
+    repo: "{{ rbenv_repo }}"
+    dest: "{{ rbenv_repo_local_destination }}"
   sudo: no
-  shell: eval "$(rbenv init -)"
+  when: ansible_os_family == "Debian"
