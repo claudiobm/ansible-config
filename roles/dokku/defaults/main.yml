@@ -1,0 +1,13 @@
+dokku_version: "0.3.19"
+dokku_vhost: "{{ hostname }}"
+dokku_plugins:
+  - { name: "dokku-link", repo: "https://github.com/rlaneve/dokku-link.git" }
+  - { name: "dokku-memcached-plugin", repo: "https://github.com/jezdez/dokku-memcached-plugin.git" }
+  - { name: "dokku-redis-plugin", repo: "https://github.com/jezdez/dokku-redis-plugin.git" }
+  - { name: "heroku-buildpack-go", repo: "https://github.com/heroku/heroku-buildpack-go.git" }
+  - { name: "heroku-buildpack-multi", repo: "https://github.com/heroku/heroku-buildpack-multi.git" }
+  - { name: "heroku-buildpack-nodejs", repo: "https://github.com/heroku/heroku-buildpack-nodejs.git" }
+  - { name: "heroku-buildpack-php", repo: "https://github.com/heroku/heroku-buildpack-php.git" }
+  - { name: "heroku-buildpack-ruby", repo: "https://github.com/heroku/heroku-buildpack-ruby.git" }
+  - { name: "heroku-pg-extras", repo: "https://github.com/heroku/heroku-pg-extras.git" }
+  - { name: "dokku-pg-plugin", repo: "https://github.com/Kloadut/dokku-pg-plugin.git" }

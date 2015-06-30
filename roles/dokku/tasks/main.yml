@@ -1,0 +1,12 @@
+---
+- name: "Install dokku"
+  shell: "wget -qO- https://raw.github.com/progrium/dokku/v{{ dokku_version }}/bootstrap.sh | sudo DOKKU_TAG=v{{ dokku_version }} bash"
+  args:
+    creates: /var/lib/dokku
+
+- name: "Configure dokku vhost"
+  copy: dest=/home/dokku/VHOST content={{ dokku_vhost }}
+
+- name: "Install plugins"
+  git: repo="{{ item.repo }}" dest="/var/lib/dokku/plugins/{{ item.name }}" accept_hostkey=yes version="{{ item.version|default('master') }}"
+  with_items: dokku_plugins
