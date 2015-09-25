@@ -1,6 +1,6 @@
 ---
 - name: Install workstation Linux
-  hosts: workstation
+  hosts: workstation_linux
   sudo: no
 
   roles:
