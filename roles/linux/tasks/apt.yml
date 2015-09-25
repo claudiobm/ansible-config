@@ -8,14 +8,13 @@
     - tmux
     - vim
     - zsh
-    - freetype
     - imagemagick
     - jpeg
     - openssl
     - python
     - redis
     - tree
-    - v8
+    - nodejs
     - htop
     - sqlite
     - docker
