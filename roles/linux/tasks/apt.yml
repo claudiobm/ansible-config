@@ -9,10 +9,9 @@
     - vim
     - zsh
     - imagemagick
-    - jpeg
     - openssl
     - python
-    - redis
+    - redis-server
     - tree
     - nodejs
     - htop
