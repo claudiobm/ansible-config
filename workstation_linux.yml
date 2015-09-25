@@ -1,0 +1,11 @@
+---
+- name: Install workstation Linux
+  hosts: workstation
+  sudo: no
+
+  roles:
+    - git
+    - dotfiles
+    - sublime
+    - oh-my-zsh
+    - linux

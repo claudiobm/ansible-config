@@ -1,0 +1,4 @@
+locallinux ansible_connection=local
+
+[workstation_linux]
+locallinux

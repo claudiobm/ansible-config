@@ -1,0 +1,22 @@
+---
+- name: 'Install apt apps'
+  sudo: no
+  apt: pkg={{ item }}
+  when: ansible_os_family == "Debian"
+  with_items:
+    - curl
+    - tmux
+    - vim
+    - zsh
+    - freetype
+    - imagemagick
+    - jpeg
+    - openssl
+    - python
+    - redis
+    - tree
+    - v8
+    - htop
+    - sqlite
+    - docker
+    - wget
