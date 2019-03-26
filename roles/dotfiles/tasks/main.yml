@@ -12,4 +12,4 @@
     force: yes
     state: link
   sudo: no
-  with_items: dotfiles_files
+  with_items: "{{ dotfiles_files }}"
