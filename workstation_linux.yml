@@ -6,6 +6,5 @@
   roles:
     - git
     - dotfiles
-    - sublime
     - oh-my-zsh
     - linux
