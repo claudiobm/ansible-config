@@ -1,8 +1,6 @@
 ---
 - name: Install workstation Linux
   hosts: workstation_linux
-  sudo: no
-
   roles:
     - git
     - dotfiles

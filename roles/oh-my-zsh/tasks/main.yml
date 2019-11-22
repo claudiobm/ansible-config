@@ -3,9 +3,7 @@
   git:
     repo: "{{ ohmyzsh_repo }}"
     dest: "{{ ohmyzsh_repo_local_destination }}"
-  sudo: no
 
 - name: 'Install git in debian'
-  sudo: true
   apt: pkg=zsh
   when: ansible_os_family == "Debian"

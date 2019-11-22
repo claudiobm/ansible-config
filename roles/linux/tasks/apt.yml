@@ -1,6 +1,5 @@
 ---
 - name: 'Install apt apps'
-  sudo: yes
   apt:
     pkg:
       - curl

@@ -3,7 +3,6 @@
   git:
     repo: "{{ dotfiles_repo }}"
     dest: "{{ dotfiles_repo_local_destination }}"
-  sudo: no
 
 - name: Link dotfiles into home folder.
   file:
@@ -11,5 +10,4 @@
     dest: "{{ dotfiles_home }}/.{{ item }}"
     force: yes
     state: link
-  sudo: no
   with_items: "{{ dotfiles_files }}"
