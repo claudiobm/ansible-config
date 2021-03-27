@@ -1,23 +1,12 @@
 ---
-- name: 'Installing Homebrewcask'
-  sudo: no
-  shell: brew install caskroom/cask/brew-cask
-
 - name: 'Update brew cask'
-  sudo: no
-  shell: brew-cask update
+  shell: brew update
 
 - name: 'Installing default Apps'
-  sudo: no
   homebrew_cask: name={{item}} state=present
   with_items:
-    - adium
     - alfred
-    - cyberduck
-    - evernote
     - firefox
-    - google-chrome
     - iterm2
     - vlc
     - sourcetree
-    - slack

@@ -9,10 +9,6 @@
   stat: path={{ sublime_repo_local_destination }}
   register: sublime_config_exist
 
-- name: Install sublime configs
-  shell: git clone {{ sublime_repo }} {{ sublime_repo_local_destination }}
-  when: sublime_config_exist.stat.isdir is not defined
-
 - name: Update sublime configs
   shell: cd {{ sublime_repo_local_destination }} && git pull origin master
   ignore_errors: True
